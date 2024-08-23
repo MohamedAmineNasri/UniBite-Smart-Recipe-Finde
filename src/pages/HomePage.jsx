@@ -2,6 +2,9 @@ import {  Search } from "lucide-react";
 import RecipeCard from "../components/RecipeCard";
 
 const HomePage = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+  console.log('API URL:', apiUrl);
+  
   return (
     <div className="bg-[#faf9fb] p-10 flex-1">
       <div className="max-w-screen-lg  mx-auto">
