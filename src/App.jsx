@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
 import FavoritesPage from "./pages/FavoritesPage";
 import { useEffect, useState } from "react";
+import Sidebar from "./components/SideBar";
 
 function App() {
   const [loading, setLoading] = useState(true);
