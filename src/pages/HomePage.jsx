@@ -36,7 +36,7 @@ const HomePage = () => {
     fetchRecipes(e.target[0].value)
   }
   return (
-    <div className="bg-[#faf9fb] p-10 flex-1">
+    <div className=" p-10 flex-1">
       <div className="max-w-screen-lg  mx-auto">
         <form onSubmit={handleSearchRecipe}>
           <label className="input shadow-md  flex items-center gap-2">
