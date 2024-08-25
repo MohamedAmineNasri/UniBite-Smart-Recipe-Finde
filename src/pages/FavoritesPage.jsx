@@ -47,8 +47,6 @@ const FavoritesPage = () => {
             </div>
 
             <div className="home__footer flex items-center justify-center gap-2 self-end text-sm font-semibold">
-              <p>0891 2345 6789</p>
-              <p>|</p>
               <p>mohamedamine.nasri@esprit.tn</p>
             </div>
           </section>
