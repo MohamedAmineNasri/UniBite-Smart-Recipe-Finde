@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { getRandomColor } from "../libs/utils";
 
 const HomePage = () => {
-  console.log("API ID:", import.meta.env.VITE_APP_ID);
 
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
