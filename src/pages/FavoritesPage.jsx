@@ -12,11 +12,7 @@ const FavoritesPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {fav.map((recipe, index) => (
-            <RecipeCard
-              key={index}
-              recipe={recipe}
-              {...getRandomColor()}
-            />
+            <RecipeCard key={index} recipe={recipe} {...getRandomColor()} />
           ))}
         </div>
         {fav.length === 0 && (
