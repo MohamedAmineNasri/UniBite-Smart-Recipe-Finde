@@ -1,28 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import "./NotFound.css";
 import RecipeCard from "../components/RecipeCard";
+import { getRandomColor } from "../libs/utils";
 const FavoritesPage = () => {
-  const navigate = useNavigate()
-  const fav = true;
+  const navigate = useNavigate();
+  const fav = JSON.parse(localStorage.getItem("favorites")) || [];
   return (
     <div className="bg-[#faf9fb] flex-1 p-10 min-h-screen">
       <div className="max-w-screen-lg mx-auto">
         <p className="font-bold text-3xl md:text-5xl my-4">My Favorites</p>
-        {fav ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-          </div>
-        ) : (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {fav.map((recipe, index) => (
+            <RecipeCard
+              key={index}
+              recipe={recipe}
+              {...getRandomColor()}
+            />
+          ))}
+        </div>
+        {fav.length === 0 && (
           <section className="home grid h-screen pt-32 pb-16">
             <div className="home__container container grid content-center gap-12 lg:max-w-5xl lg:grid-cols-2 lg:items-center">
               <div className="home__data justify-self-center text-center lg:text-left">
